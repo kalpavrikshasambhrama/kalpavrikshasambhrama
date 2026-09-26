@@ -2047,3 +2047,24 @@ footer p {
 .instagram-link:hover {
     opacity: 0.75;
 }
+
+.instagram-name {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.instagram-icon {
+
+    width: 22px;
+
+    height: 22px;
+
+    flex-shrink: 0;
+
+}

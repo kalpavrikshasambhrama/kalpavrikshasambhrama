@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Event Gallery | Kalpavriksha Sambhrama
+    </title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <style>
+
+        .event-page {
+
+            min-height: 100vh;
+
+            padding:
+                140px 7%
+                80px;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(213,168,74,.10),
+                    transparent 35%
+                );
+
+        }
+
+
+        .event-back {
+
+            display: inline-block;
+
+            margin-bottom: 40px;
+
+            color:
+                var(--gold-light);
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .event-title {
+
+            max-width: 850px;
+
+        }
+
+
+        .event-title h1 {
+
+            margin-top: 15px;
+
+            font-family:
+                var(--serif);
+
+            font-size:
+                clamp(55px, 8vw, 100px);
+
+            line-height: .9;
+
+        }
+
+
+        .event-title h1 span {
+
+            color:
+                var(--gold-light);
+
+        }
+
+
+        .event-description {
+
+            max-width: 650px;
+
+            margin-top: 25px;
+
+            color:
+                var(--gray);
+
+            line-height: 1.8;
+
+            font-size: 14px;
+
+        }
+
+
+        .gallery-heading {
+
+            margin-top: 80px;
+
+            margin-bottom: 30px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: end;
+
+        }
+
+
+        .gallery-heading h2 {
+
+            font-size: 45px;
+
+        }
+
+
+        .photo-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 12px;
+
+        }
+
+
+        .photo-card {
+
+            height: 350px;
+
+            overflow: hidden;
+
+            background:
+                #111;
+
+            border:
+                1px solid
+                rgba(213,168,74,.12);
+
+        }
+
+
+        .photo-card img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                .6s;
+
+        }
+
+
+        .photo-card:hover img {
+
+            transform:
+                scale(1.06);
+
+        }
+
+
+        .event-services {
+
+            margin-top: 80px;
+
+            padding:
+                45px;
+
+            background:
+                #0b0a08;
+
+            border:
+                1px solid
+                var(--line);
+
+        }
+
+
+        .event-services h2 {
+
+            font-size: 45px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .event-service-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 1px;
+
+            background:
+                var(--line);
+
+        }
+
+
+        .event-service-list div {
+
+            padding:
+                22px;
+
+            background:
+                #090908;
+
+            color:
+                #aaa;
+
+            font-size: 12px;
+
+        }
+
+
+        .event-service-list strong {
+
+            display: block;
+
+            color:
+                var(--white);
+
+            font-family:
+                var(--serif);
+
+            font-size: 23px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .event-contact {
+
+            margin-top: 80px;
+
+            padding:
+                60px;
+
+            text-align:
+                center;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #171209,
+                    #090806
+                );
+
+            border:
+                1px solid
+                var(--line);
+
+        }
+
+
+        .event-contact h2 {
+
+            font-size:
+                clamp(40px,5vw,65px);
+
+        }
+
+
+        .event-contact p {
+
+            margin:
+                15px auto 25px;
+
+            max-width:
+                550px;
+
+            color:
+                #888;
+
+        }
+
+
+        @media(max-width:800px) {
+
+            .photo-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .event-service-list {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media(max-width:550px) {
+
+            .photo-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .photo-card {
+
+                height:
+                    300px;
+
+            }
+
+
+            .event-services {
+
+                padding:
+                    25px;
+
+            }
+
+
+            .event-contact {
+
+                padding:
+                    40px 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+    <a href="index.html"
+       class="brand">
+
+        <span class="brand-mark">
+            KS
+        </span>
+
+        <span class="brand-text">
+
+            <strong>
+                Kalpavriksha
+            </strong>
+
+            <small>
+                Sambhrama
+            </small>
+
+        </span>
+
+    </a>
+
+
+    <nav class="nav">
+
+        <a href="index.html#home">
+            Home
+        </a>
+
+        <a href="index.html#events">
+            Events
+        </a>
+
+        <a href="index.html#services">
+            Services
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+        <a class="nav-whatsapp"
+           href="https://wa.me/916366002119?text=Hello%20Kalpavriksha%20Sambhrama%2C%20I%20would%20like%20to%20discuss%20an%20event."
+           target="_blank">
+
+            WhatsApp
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="event-page">
+
+
+    <a href="index.html#events"
+       class="event-back">
+
+        ← BACK TO EVENTS
+
+    </a>
+
+
+    <div class="event-title">
+
+        <div class="section-label"
+             id="eventNumber">
+
+            01 / EVENT
+
+        </div>
+
+
+        <h1 id="eventTitle">
+
+            Weddings
+
+        </h1>
+
+
+        <p class="event-description"
+           id="eventDescription">
+
+            Explore our event concepts,
+            decoration styles and production
+            possibilities.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="gallery-heading">
+
+        <div>
+
+            <div class="section-label">
+                EVENT GALLERY
+            </div>
+
+            <h2>
+                Inspiration & Decoration
+            </h2>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="photo-grid"
+         id="photoGrid">
+
+    </div>
+
+
+
+    <section class="event-services">
+
+        <div class="section-label">
+            WHAT WE CAN PROVIDE
+        </div>
+
+        <h2>
+            Complete Event Services
+        </h2>
+
+
+        <div class="event-service-list">
+
+
+            <div>
+
+                <strong>
+                    Decoration
+                </strong>
+
+                Stage, entrance,
+                floral and venue decoration.
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Lighting
+                </strong>
+
+                Decorative, ambient
+                and stage lighting.
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Sound
+                </strong>
+
+                Professional sound,
+                DJ and audio production.
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Stage Design
+                </strong>
+
+                Custom stage and
+                backdrop concepts.
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Photography
+                </strong>
+
+                Candid and traditional
+                event photography.
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Entertainment
+                </strong>
+
+                DJs, artists, performers
+                and live entertainment.
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Catering
+                </strong>
+
+                Food planning,
+                service and hospitality.
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Guest Management
+                </strong>
+
+                Registration,
+                hospitality and coordination.
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Event Coordination
+                </strong>
+
+                Complete event-day
+                management.
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <section class="event-contact">
+
+        <div class="section-label">
+            PLAN YOUR EVENT
+        </div>
+
+
+        <h2>
+            Like what you see?
+        </h2>
+
+
+        <p>
+            Tell us what you have in mind
+            and let's create something
+            memorable together.
+        </p>
+
+
+        <a class="btn gold"
+           id="whatsappButton"
+           href="#"
+           target="_blank">
+
+            Discuss This Event on WhatsApp
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<script src="event.js"></script>
+
+</body>
+
+</html>

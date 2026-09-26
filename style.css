@@ -284,9 +284,9 @@ select {
     background:
 
         radial-gradient(
-            circle at 15% 5%,
+            circle at 75% 15%,
             rgba(213,168,74,.13),
-            transparent 0%
+            transparent 30%
         ),
 
         linear-gradient(
@@ -545,23 +545,7 @@ select {
 
 
 .gold-circle {
-
-    position: absolute;
-
-    width: 75%;
-
-    aspect-ratio: 1;
-
-    border:
-        1px solid
-        rgba(213,168,74,.2);
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 80px
-        rgba(213,168,74,.08);
-
+    display: none;
 }
 
 

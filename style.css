@@ -284,9 +284,9 @@ select {
     background:
 
         radial-gradient(
-            circle at 75% 45%,
+            circle at 15% 5%,
             rgba(213,168,74,.13),
-            transparent 30%
+            transparent 0%
         ),
 
         linear-gradient(
